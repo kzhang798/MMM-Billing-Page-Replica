@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Make Me Modern</title>
+	<link rel="shortcut icon" href="http://www.iconj.com/ico/l/9/l95og6wl5l.ico" type="image/x-icon" />
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="MakeMeModern.css">
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+	<div class="outer" id="div1">
+		<div class="wrapper">
+			<div class="align">
+				<div class="item">
+					<img src="https://makememodern.com/wp-content/uploads/mmm_logo.png">
+				</div>
+				<div class="item" id="pay_invoice" onclick="showInvoice()">
+					<div class="option fade">Pay an invoice</div>
+				</div>
+				<div class="item" id="sign_up_hosting" onclick="showHosting()">
+					<div class="option fade">Sign up for hosting</div>
+				</div>
+				<div class="item" id="sign_up_ssl" onclick="showSSL()">
+					<div class="option fade">Sign up for an SSL certificate</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="outer" id="div2" style="display: none"> <!-- buttons start out gray -->
+		<div class="wrapper">
+			<div class="align">
+				<div class="input-field item" style="margin-bottom: 0">
+					<label for="invoice_email">Where would you like us to send your receipt?</label>
+					<input id="invoice_email" type="text" placeholder="john.smith@example.com">
+				</div>
+				<div class="input-field smallItem">
+					<label for="invoice_number">Invoice Number</label>
+					<input id="invoice_number" type="number" maxlength="4" placeholder="2344">
+				</div>
+				<div class="input-field smallItem">
+					<label for="payment_amount">Payment Amount</label>
+					<input id="payment_amount" type="number" placeholder="$2000.00">
+				</div>
+				<div class="input-field item">
+					<p>You can pay <span style="text-decoration: underline">securely</span> via credit card, but unfortunately we have to charge small fees to cover the costs of our payment processing companies. We charge 2.9% + 30¢ for credit card transactions, which will bring your total to $<span class="cost">0.00</span>. Select a payment method below:</p> <!-- Spelled "unfortunetly" on billing site -->
+				</div>
+				<div class="smallItem size-change">
+					<div class="pay gray fade">Credit / Debit Card<br> Pay $<span class="cost">0.00</span></div>
+				</div>
+				<div class="smallItem size-change">
+					<div class="pay gray fade">Mail A Check<br> Pay $<span class="check_cost">0.00</span></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="outer" id="div3" style="display: none"> <!-- buttons are already orange according to billing page -->
+		<div class="wrapper">
+			<div class="align">
+				<div class="input-field item" style="margin-bottom: 0">
+					<label for="domain_name">What is your domain name?</label>
+					<input id="domain_name" type="text" placeholder="website.com">
+				</div>
+				<div class="input-field item" style="margin-bottom: 0">
+					<label for="confirmation_email">Where would you like us to send your confirmation?</label>
+					<input id="confirmation_email" type="text" placeholder="john.smith@gmail.com">
+				</div>
+				<div class="input-field item">
+					<label for="hosting_plan">Which <a href="https://makememodern.com/services/hosting/" style="color: #e45323; text-decoration: none;">hosting plan</a> would you like?</label>
+					<select id="hosting_plan">
+						<option>Select a Plan</option>
+						<option>BASIC - $20/MONTH</option>
+						<option>PRO - $30/MONTH</option>
+						<option>VIP - $40/MONTH</option>
+					</select>
+				</div>
+				<div class="input-field item">
+					<p>Your card will be <span style="text-decoration: underline">securely</span> charged $0.00 on this date each month and you will receive receipts at the email address that you entered above. You can cancel your hosting plan at any time with no hidden fees.</p> <!-- Spelled "unfortunetly" on billing site -->
+				</div>
+				<div class="item">
+					<div class="pay orange fade">Credit / Debit Card</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="outer" id="div4" style="display: none"> <!-- buttons are already orange according to billing page -->
+		<div class="wrapper">
+			<div class="align">
+				<div class="input-field item" style="margin-bottom: 0">
+					<label for="domain_name_ssl">What is your domain name?</label>
+					<input id="domain_name_ssl" type="text" placeholder="website.com">
+				</div>
+				<div class="input-field item">
+					<label for="email_ssl">Where would you like us to send your confirmation?</label>
+					<input id="email_ssl" type="text" placeholder="Email Address">
+				</div>
+				<div class="input-field item">
+					<p>Your card will be <span style="text-decoration: underline">securely</span> charged $50.00 on this date each year and you will receive receipts at the email address that you entered above. You can opt to remove your SSL Certificate at any time with no hidden fees.</p>
+				</div>
+				<div class="item">
+					<div class="pay orange fade">Credit / Debit Card</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<script src="MakeMeModern.js"></script>
+</body>
+</html>
